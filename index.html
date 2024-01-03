@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function image_picker (){
+            const list_image = ["disney 1.jpeg", "disney 2.jpeg", "disney 3.jpeg"];
+            let pilihan = document.getElementById("opsi").value;
+
+            if(pilihan == "belle" ){
+                let select = list_image[0]; //disney 1.jpeg
+                document.getElementById("gambar").scr = `image/${select}`;
+            }
+
+            if(pilihan == "mulan"){
+                let select = list_image[1]; //disney2.jpeg
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+
+            if(pilihan == "anna"){
+                let select = list_image[2]; //disney 3.jpeg
+                document.getElementById("gambar").src = `image/${select}`;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1> Image  Picker </h1>
+
+    <select name="" id="opsi" onchange="image_picker()">
+        <option value="belle"> Belle </option>
+        <option value="mulan"> Mulan </option>
+        <option value="anna"> Anna </option>
+    </select>
+
+    <div class="container">
+        <img id="gambar" width="500px">
+    </div>
+</body>
+</html>

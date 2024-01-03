@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Document</title>
+    <script> 
+     
+    var input = document.querySelector(".input");
+    var tampil = document.querySelector(".tampil");
+
+    function chat() {
+    tampil.innerHTML =tampil.innerHTML + "pesan : " + input.value + "\n"; input.value="";
+    }
+    </script>
+</head>
+<body>
+    <textarea nampil="tampil" class="tampil" cols="45" rows="15" disabled> </textarea>
+    <br>
+    <input type="text" class="input">
+    <button class="submit" onclick="chat()">submit</button>
+</body>
+</html>
